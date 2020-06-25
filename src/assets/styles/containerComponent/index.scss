@@ -1,0 +1,144 @@
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  &-header {
+    background-color: #fff;
+    height: 72px;
+    //border-bottom: solid #61AD15 4px;
+  }
+
+  &-main {
+    background-color: #FBFBFD;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    &__header, &__content {
+      max-width: 544px;
+      min-width: 544px;
+    }
+
+    &__header {
+      font-family: Roboto;
+      font-weight: 500;
+      font-size: 38px;
+      line-height: 60px;
+      align-items: center;
+      color: #333848;
+      margin: auto auto 32px auto
+    }
+
+    &__content {
+      margin: 0 auto auto;
+    }
+  }
+
+  &-footer {
+    background-color: #fff;
+    min-height: 72px;
+    max-height: 72px;
+    box-shadow: inset 0px 1px 0px #E7E9F0;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .btn-back {
+      font-family: Roboto;
+      font-weight: normal;
+      font-size: 16px;
+      border: 1px solid #E7E9F0;
+      padding: 13.5px 24px;
+      color: #5D606B;
+      box-shadow: 0px 2px 4px rgba(133, 136, 146, 0.12);
+      border-radius: 4px;
+      margin-left: 160px;
+      background-color: #fff;
+    }
+
+    .btn-next-step {
+      box-sizing: border-box;
+      box-shadow: 0px 2px 4px rgba(73, 129, 18, 0.3);
+      border-radius: 4px;
+      border: 0.5px solid #518B18;
+      background-color: #61AD15;
+      color: #fff;
+      font-family: Roboto;
+      font-weight: normal;
+      font-size: 16px;
+      padding: 13px 28px 13px 24px;
+      margin-right: 160px;
+      display: flex;
+      align-items: center;
+
+      &__text {
+        margin-right: 12px;
+      }
+
+      &.un-active {
+        background-color: #F4F6F9;
+        color: #A8ACBC;
+        border: 0.5px solid #E7E9F0;
+        box-shadow: unset;
+      }
+    }
+  }
+
+  &.long-text-field, &.radio-button, &.checkboxes, &.dropdown {
+    .container-header {
+      &:before {
+        content: '';
+        display: block;
+        border-bottom: solid #61AD15 4px;
+        height: 68px;
+      }
+    }
+  }
+
+  &.radio-button {
+    .container-header {
+      &:before {
+        width: 25%;
+      }
+    }
+  }
+
+  &.long-text-field {
+    .container-header {
+      &:before {
+        width: 50%;
+      }
+    }
+  }
+
+  &.checkboxes {
+    .container-header {
+      &:before {
+        width: 75%;
+      }
+    }
+
+    .container-main {
+      &__header {
+        margin: auto auto 56px auto;
+      }
+    }
+  }
+
+  &.dropdown {
+    .container-header {
+      &:before {
+        width: 100%;
+      }
+    }
+
+    .container-main {
+      &__header {
+        margin: auto auto 4px auto;
+      }
+    }
+  }
+}
