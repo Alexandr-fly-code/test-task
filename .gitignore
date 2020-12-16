@@ -21,5 +21,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*import logo from './logo.svg';
 package-lock.json
+yarn.lock
 
 .idea
