@@ -1,4 +1,4 @@
-import React, {useState, lazy, Suspense, useEffect} from 'react';
+import React, { useState, lazy, Suspense, useEffect } from 'react';
 
 import { connect } from 'react-redux';
 import { getAndSetFixedPrice } from './components/redux/actions/fixedPriceAction';
@@ -127,7 +127,7 @@ function App({ getAndSetFixedPrice }) {
 }
 
 const mapDispatchToProps = {
-  getAndSetFixedPrice
+  getAndSetFixedPrice,
 };
 
 export default connect(null, mapDispatchToProps)(App);

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 
 import '../../assets/styles/checkboxesComponent/index.scss';
 
@@ -20,22 +20,18 @@ const CheckboxesComponent = ({ setTotalPointFromCheckBoxes }) => {
 
     let state;
 
-    if (arrayCheckedCheckBoxes.length > 1) {
-      state = true;
-    }else {
-      state = false;
-    }
+    state = arrayCheckedCheckBoxes.length > 1;
 
     setIsMoreOneChekedCheckBox(state);
 
-  }, [isCheckedFirstCheckbox, isCheckedSecondCheckbox, isCheckedThirdCheckbox, isCheckedFourthCheckbox, isCheckedFifthCheckbox, totalValueFromCheckBoxes])
+  }, [isCheckedFirstCheckbox, isCheckedSecondCheckbox, isCheckedThirdCheckbox, isCheckedFourthCheckbox, isCheckedFifthCheckbox, totalValueFromCheckBoxes]);
 
 
   useEffect(() => {
     if (isMoreOneChekedCheckBox) {
       setTotalValueFromCheckBoxes(10);
     }
-  }, [isMoreOneChekedCheckBox])
+  }, [isMoreOneChekedCheckBox]);
 
   useEffect(() => {
     if (totalValueFromCheckBoxes === 5) {
@@ -43,7 +39,7 @@ const CheckboxesComponent = ({ setTotalPointFromCheckBoxes }) => {
     }else {
       setTotalPointFromCheckBoxes(totalValueFromCheckBoxes);
     }
-  }, [totalValueFromCheckBoxes])
+  }, [totalValueFromCheckBoxes]);
 
   const valueForCheckBox = isMoreOneChekedCheckBox ? 10 - 5 : 10;
 
@@ -51,11 +47,10 @@ const CheckboxesComponent = ({ setTotalPointFromCheckBoxes }) => {
     const value = Number(e.target.value);
     const isChecked = e.target.checked;
 
-
     if (isChecked && isMoreOneChekedCheckBox && value !== 10) {
-      setTotalValueFromCheckBoxes(totalValueFromCheckBoxes + value)
+      setTotalValueFromCheckBoxes(totalValueFromCheckBoxes + value);
     }else if (!isChecked && isMoreOneChekedCheckBox && value !== 10){
-      setTotalValueFromCheckBoxes(totalValueFromCheckBoxes - value)
+      setTotalValueFromCheckBoxes(totalValueFromCheckBoxes - value);
     }
   }
 
@@ -70,7 +65,7 @@ const CheckboxesComponent = ({ setTotalPointFromCheckBoxes }) => {
           onClick={onClickCheckBox}
         />
         <p>Single</p>
-          <span className="checkmark"></span>
+          <span className="checkmark"/>
       </label>
       <label className="wrapper">
         <input
@@ -81,7 +76,7 @@ const CheckboxesComponent = ({ setTotalPointFromCheckBoxes }) => {
           onClick={onClickCheckBox}
         />
         <p>Married filing jointly</p>
-          <span className="checkmark"></span>
+          <span className="checkmark"/>
       </label>
       <label className="wrapper">
         <input
@@ -92,7 +87,7 @@ const CheckboxesComponent = ({ setTotalPointFromCheckBoxes }) => {
           onClick={onClickCheckBox}
         />
         <p>Married filing separately</p>
-          <span className="checkmark"></span>
+          <span className="checkmark"/>
       </label>
       <label className="wrapper">
         <input
@@ -103,7 +98,7 @@ const CheckboxesComponent = ({ setTotalPointFromCheckBoxes }) => {
           onClick={onClickCheckBox}
         />
         <p>Head of Household</p>
-          <span className="checkmark"></span>
+          <span className="checkmark"/>
       </label>
       <label className="wrapper">
         <input
@@ -114,7 +109,7 @@ const CheckboxesComponent = ({ setTotalPointFromCheckBoxes }) => {
           onClick={onClickCheckBox}
         />
         <p>Qualifying window(-er) with dependent child</p>
-        <span className="checkmark"></span>
+        <span className="checkmark"/>
       </label>
     </div>
   );

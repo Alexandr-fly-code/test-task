@@ -7,7 +7,7 @@ const LongTextFieldComponent = ({ setInputValue }) => {
     const value = e.target.value;
 
     setInputValue(Number(value));
-  }
+  };
 
   return (
     <div className='long-text-field'>

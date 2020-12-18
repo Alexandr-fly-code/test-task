@@ -38,7 +38,7 @@ const ContainerComponent = ({
       default:
         return false;
     }
-  }
+  };
 
   const onClickBtnBack = () => {
     switch (componentName) {
@@ -62,13 +62,11 @@ const ContainerComponent = ({
       default:
         return false;
     }
-  }
+  };
 
   return (
     <section className={`container ${className}`}>
-      <header className='container-header'>
-
-      </header>
+      <header className='container-header'/>
 
       <main className='container-main'>
         <h1 className='container-main__header'>{title}</h1>
@@ -81,7 +79,7 @@ const ContainerComponent = ({
         {componentName !== 'radio-button' ? (
           <button className='btn-back' onClick={onClickBtnBack}>Back</button>
         ): (
-          <button></button>
+          <button/>
         )}
 
         {componentName === 'dropdown' ? (

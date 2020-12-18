@@ -14,7 +14,7 @@ const DropDownComponent = ({ fixedPrice }) => {
       <div className='drop-down__wrapper'>
         <div className='drop-down__wrapper-item'>
           <div className='left-content'>
-            <p className='left-content__circle'></p>
+            <p className='left-content__circle'/>
             <span className='left-content__text'>TaxGig Hero</span>
           </div>
 
@@ -24,7 +24,7 @@ const DropDownComponent = ({ fixedPrice }) => {
           </div>
         </div>
         <div className='drop-down__wrapper-item'>
-          <p className='circle'></p>
+          <p className='circle'/>
           <p className='text'>Find another Pro</p>
         </div>
       </div>

@@ -3,7 +3,7 @@ import fixedPrice from './fixedPriceReducer';
 
 
 const rootReducer = combineReducers({
-  fixedPrice
+  fixedPrice,
 });
 
 export default rootReducer;

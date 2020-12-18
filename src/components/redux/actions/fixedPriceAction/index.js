@@ -4,5 +4,5 @@ export const getAndSetFixedPrice = (fixedPrice) => ({
   type: GET_AND_SET_FIXED_PRICE,
   payload: {
     fixedPrice
-  }
-})
+  },
+});
